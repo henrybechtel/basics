@@ -1,11 +1,18 @@
 import random as random
 import sys
 
-
-
 # name = sys.argv[1]
 # print(f"Hello, {name}!")
 
+'''
+# Hypothiesis testing with an assumed model (DGP)
+Let's suppose you come across a coin that has been flipped x times and has landed on heads y of those times. 
+Is it a fair coin?
+First, we need to state the null hypothesis: 
+"The coin is fair and the y heads are the result of random chance"
+Our test statistic will be the sum (count) of all the heads flipped.
+Here we have a DGP model to simulate the conditionsa of the null hypothesis: a binary random variable with equal probability of landing heads or tails.
+'''
 
 
 # Defining our null hypothesis as a function
@@ -40,9 +47,9 @@ def main():
 
     # Arbitrary p-value threshold interpretation:
     if p < 0.05:
-        print("The coin is likely biased. Null Hypothesis rejected.")
+        print("The coin is likely biased. We should reject the null hypothesis.")
     else:
-        print("The Null Hypothesis couldn't be rejected.")
+        print("The null hypothesis couldn't be rejected.")
 
 
 if __name__ == "__main__":
